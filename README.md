@@ -106,11 +106,3 @@ Open your browser and visit: `http://127.0.0.1:5000`
 *   **HTML5 & CSS3**: Visuals and animations.
 *   **Web Speech API**: Native browser speech recognition & synthesis.
 *   **Google Gemini API**: LLM intelligence.
-
----
-
-## 📸 Screenshots
-*(Add screenshots of your stunning UI here)*
-
----
-**Developed with ❤️ by [Your Name]**
