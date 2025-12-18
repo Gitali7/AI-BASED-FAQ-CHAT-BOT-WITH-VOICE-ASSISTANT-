@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova AI - Next Gen Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Dynamic Aurora Background -->
+    <div class="aurora-bg">
+        <div class="aurora-spot spot-1"></div>
+        <div class="aurora-spot spot-2"></div>
+        <div class="aurora-spot spot-3"></div>
+    </div>
+
+    <div class="app-container">
+        <!-- Sidebar (Visual Only) -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-bolt"></i>
+            </div>
+            <!-- Nav icons removed -->
+            <div class="profile">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="User">
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-interface">
+            <header class="chat-header">
+                <div class="header-info">
+                    <h1>Nova AI <span class="version-tag">2.0</span></h1>
+                    <p>Voice-Enabled Neural Interface</p>
+                </div>
+                <div class="connection-status">
+                    <span class="status-indicator"></span> Online
+                </div>
+            </header>
+
+            <div class="chat-viewport" id="chat-container">
+                <div class="message bot-message intro-message">
+                    <div class="avatar gradient-avatar"><i class="fa-solid fa-sparkles"></i></div>
+                    <div class="bubble glass-bubble">
+                        Greetings. I am Nova. <br>
+                        I am ready to assist you. You can type or speak naturally.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Typing Indicator (Hidden by default) -->
+            <div id="typing-indicator" class="typing-indicator hidden">
+                <span></span><span></span><span></span>
+            </div>
+
+            <div class="input-zone">
+                <div class="input-glass-bar">
+                    <canvas id="voice-visualizer" class="visualizer hidden"></canvas>
+                    <button id="mic-btn" class="action-btn mic-btn" title="Toggle Voice Input">
+                        <i id="mic-icon" class="fa-solid fa-microphone-lines"></i>
+                    </button>
+                    <input type="text" id="user-input" placeholder="Ask me something..." autocomplete="off">
+                    <button id="send-btn" class="action-btn send-btn" title="Send Message">
+                        <i class="fa-solid fa-location-arrow"></i>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
