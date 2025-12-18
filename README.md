@@ -22,20 +22,20 @@ The system follows a modern 3-Layer Architecture:
 ```mermaid
 graph TD
     subgraph Frontend ["Frontend Layer (Browser)"]
-        UI[User Interface (HTML/CSS)]
-        MIC[Microphone Input] <--> WS[Web Speech API]
-        VIS[Canvas Visualizer]
-        TTS[Text-to-Speech Output]
+        UI["User Interface (HTML/CSS)"]
+        MIC["Microphone Input"] <--> WS["Web Speech API"]
+        VIS["Canvas Visualizer"]
+        TTS["Text-to-Speech Output"]
     end
 
     subgraph Backend ["Backend Layer (Flask/Python)"]
-        SRV[Flask Server]
-        LOG[Logic & Prompt Engineering]
-        EXC[Error Handling]
+        SRV["Flask Server"]
+        LOG["Logic & Prompt Engineering"]
+        EXC["Error Handling"]
     end
 
     subgraph Cloud ["AI & Cloud Layer"]
-        GEM[Google Gemini API]
+        GEM["Google Gemini API"]
     end
 
     UI --> MIC
